@@ -1,0 +1,112 @@
+[
+    {
+        "name": "Luna",
+        "gender": "Male",
+        "position": "play",
+        "season": "summer",
+        "stripe1": 1,
+        "stripe2": 1,
+        "stripe3": 0,
+        "x": 0,
+        "y": 10
+    },
+    {
+        "name": "Bella",
+        "gender": "Female",
+        "position": "stand",
+        "season": "winter",
+        "stripe1": 1,
+        "stripe2": 0,
+        "stripe3": 0,
+        "x": 310,
+        "y": 10
+    },
+    {
+        "name": "Milo",
+        "gender": "Male",
+        "position": "sit",
+        "season": "summer",
+        "stripe1": 1,
+        "stripe2": 1,
+        "stripe3": 1,
+        "x": 150,
+        "y": 100
+    },
+    {
+        "name": "Simba",
+        "gender": "Male",
+        "position": "sleep",
+        "season": "winter",
+        "stripe1": 1,
+        "stripe2": 1,
+        "stripe3": 0,
+        "x": 250,
+        "y": 240
+    },
+    {
+        "name": "Nala",
+        "gender": "Female",
+        "position": "sleep",
+        "season": "winter",
+        "stripe1": 1,
+        "stripe2": 1,
+        "stripe3": 1,
+        "x": 370,
+        "y": 190
+    },
+    {
+        "name": "Nala",
+        "gender": "Female",
+        "position": "sleep",
+        "season": "summer",
+        "stripe1": 1,
+        "stripe2": 1,
+        "stripe3": 0,
+        "x":160,
+        "y": 0
+    },
+    {
+        "name": "Oreo",
+        "gender": "Male",
+        "position": "play",
+        "season": "summer",
+        "stripe1": 1,
+        "stripe2": 0,
+        "stripe3": 0,
+        "x":130,
+        "y": 230
+    },
+    {
+        "name": "Willow",
+        "gender": "Female",
+        "position": "sit",
+        "season": "winter",
+        "stripe1": 1,
+        "stripe2": 1,
+        "stripe3": 1,
+        "x":20,
+        "y": 120
+    },
+    {
+        "name": "Tigger",
+        "gender": "Male",
+        "position": "stand",
+        "season": "summer",
+        "stripe1": 1,
+        "stripe2": 1,
+        "stripe3": 1,
+        "x":270,
+        "y": 110
+    },
+    {
+        "name": "Daisy",
+        "gender": "Female",
+        "position": "stand",
+        "season": "summer",
+        "stripe1": 1,
+        "stripe2": 1,
+        "stripe3": 1,
+        "x":0,
+        "y": 230
+    }
+]
