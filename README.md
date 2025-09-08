@@ -2,7 +2,7 @@
 
 Personal project learning Svelte + D3 using a fun data set tracking how 28 cats spend their time. 
 
-Deployed version here. Work in progress ....
+Deployed version [here](https://lazy-cats.netlify.app/). Work in progress ....
 
 --- 
 
