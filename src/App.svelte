@@ -1,5 +1,5 @@
 <script>
-    import Beeswarm from "./components/Beeswarm.svelte";
+    import Beeswarm from "./components/BeeswarmTest.svelte";
 </script>
 
 
