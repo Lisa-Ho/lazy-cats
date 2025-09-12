@@ -3,8 +3,8 @@
     import CatStand from "./CatStand.svelte";
     import CatSit from "./CatSit.svelte";
     import CatSleep from "./CatSleep.svelte";
-    import { onMount } from "svelte";
-    import cats from "../assets/cats.json";
+    export let cats;
+    
     import * as d3 from "d3";
     import { forceSimulation, forceX, forceY, forceCollide } from "d3-force";
 
@@ -20,64 +20,64 @@
     };
 
     let width = 600;
-    let height = 500;
+    $: height = width / 1.5;
+    const margin = { top: 20, right: 20, left: 20, bottom: 20 };
 
-    const margin = { top: 40, right: 50, left: 50, bottom: 40 };
+    $: radius = width * 0.038;
+    $: visualRadius = width * 0.00072;
+    $: buffer = Math.max(12, width * 0.02) * 1.2; //calculated based on font size in px
 
-    const RADIUS = 40;
     let nodes = [];
-    let centerLine;
     let hoveredData;
     let tooltipX = 0;
     let tooltipY = 0;
 
-    onMount(() => {
-        const innerWidth = width - margin.left - margin.right;
+    $: innerWidth = width - margin.left - margin.right;
+    $: centerLine = height / 2.8 - margin.top;
 
-        // X scale
-        const xScale = d3
-            .scaleLinear()
-            .domain(d3.extent(cats, (d) => d.prop_lazy))
-            .range([0, innerWidth]);
+    $: xScale = d3
+        .scaleLinear()
+        .domain(d3.extent(cats, (d) => d.prop_lazy))
+        .range([margin.left + radius, innerWidth - radius - radius]);
 
-        // Lock x position
+    $: yTarget = (d) =>
+        d.lazy_diff > 0 ? centerLine - radius - buffer : centerLine + radius + buffer;
+
+    let simulation;
+
+    $: {
+        cats.sort((a, b) => b.lazy_diff - a.lazy_diff);
+
+        if (simulation) simulation.stop();
+
         cats.forEach((d) => {
             d.x = xScale(d.prop_lazy);
             d.fx = d.x;
         });
 
-        const buffer = RADIUS;
-        centerLine = height / 2 - margin.top;
-        const minY = centerLine - RADIUS;
-        const maxY = centerLine + RADIUS;
-
-        const yTarget = (d) =>
-            d.lazy_diff > 0 ? centerLine - buffer : centerLine + buffer;
-
-        const simulation = forceSimulation(cats)
+        simulation = forceSimulation(cats)
             .force("y", forceY().y(yTarget).strength(0.2))
-            .force("collide", forceCollide().radius(RADIUS))
+            .force("collide", forceCollide().radius(radius))
             .on("tick", () => {
-                nodes = [...simulation.nodes()];
+                cats.forEach((d) => {
+                    if (d.lazy_diff > 0 && d.y > centerLine - radius - buffer)
+                        d.y = centerLine - radius - buffer;
+                    if (d.lazy_diff < 0 && d.y < centerLine + radius + buffer)
+                        d.y = centerLine + radius + buffer;
+                });
+                nodes = [...cats];
             });
+    }
 
-        simulation.on("tick", () => {
-            cats.forEach((d) => {
-                if (d.lazy_diff > 0 && d.y > minY) d.y = minY;
-                if (d.lazy_diff < 0 && d.y < maxY) d.y = maxY;
-            });
-            nodes = [...cats];
-        });
-    });
-
+    //get x/y coords for tooltip
     function handleHover(node, event) {
-            const container = document.querySelector(".chart-container");
-            const containerRect = container.getBoundingClientRect();
+        const container = document.querySelector(".chart-container");
+        const containerRect = container.getBoundingClientRect();
 
-            hoveredData = node;
-            tooltipX = event.clientX - containerRect.left + 10; // offset for visibility
-            tooltipY = event.clientY - containerRect.top + 10;
-        }
+        hoveredData = node;
+        tooltipX = event.clientX - containerRect.left + 10; // offset for visibility
+        tooltipY = event.clientY - containerRect.top + 10;
+    }
 </script>
 
 <div
@@ -88,20 +88,49 @@
     on:mouseleave={() => {
         hoveredData = null;
     }}
+    style="border: 2px solid blue"
 >
+    <div class="legend" style="display: flex; gap: 1rem; margin: 1rem 0;">
+        <div style="display: flex; align-items: center;">
+            <span class="legend-title"></span>
+        </div>
+        <div style="display: flex; align-items: center;">
+            <div
+                style="width: 16px; height: 16px; border-radius: 50%; background-color: {colr_dict[
+                    'Indoor'
+                ]}; margin-right: 8px;"
+            ></div>
+            <span>Indoor</span>
+        </div>
+        <div style="display: flex; align-items: center;">
+            <div
+                style="width: 16px; height: 16px; border-radius: 50%; background-color: {colr_dict[
+                    'Indoor Outdoor'
+                ]}; margin-right: 8px;"
+            ></div>
+            <span>Indoor and outdoor</span>
+        </div>
+    </div>
+
     <svg {width} {height} overflow="visible">
+        <!---->
+        <rect x={0} y={0} {width} {height} fill="none" stroke="red" />
+
+        <!-- Line -->
         <line
-            x1="0"
-            x2={width}
-            y1={height / 2}
-            y2={height / 2}
+            x1={margin.left}
+            x2={width - margin.left}
+            y1={centerLine + radius}
+            y2={centerLine + radius}
             stroke="gray"
             stroke-dasharray="4"
         />
+
+        <!-- Markers -->
         {#each nodes as node, i}
             {#if component_map[node.pose1]}
                 <g
-                    transform={`translate(${node.x}, ${node.y}) scale(${width * 0.0008})`}
+                    transform={`translate(${node.x}, ${node.y}) scale(${visualRadius})`}
                 >
                     <svelte:component
                         this={component_map[node.pose1]}
@@ -125,32 +154,27 @@
             <h3>{hoveredData.cat_name}</h3>
             <p class="byline">{hoveredData.cat_sex}, {hoveredData.cat_age}</p>
             <p style="margin-bottom: 0rem;">
-                Likes {hoveredData.lazy_season}, {hoveredData.pose2} and {hoveredData.pose3}
+                Likes {hoveredData.lazy_season}, {hoveredData.housing} and {hoveredData.lazy_diff}
             </p>
         </div>
     {/if}
 </div>
 
 <!--
-
-
-<div class="chart-container" bind:clientWidth={width}>
-    <svg {width} {height}  overflow="visible">
-        {#each nodes as node, i}
-            <circle 
-                cx={node.x} cy={node.y} r={RADIUS} 
-                fill={colr_dict[node.housing]} />
-        {/each}
-    </svg>
-</div>
-
-
  -->
 
 <style>
     .chart-container {
         position: relative;
-        padding: 2rem 0.2rem 2rem 0.2rem;
+        padding-top: 2rem;
+    }
+
+    .legend {
+        font-size: 1rem;
+    }
+
+    .legend-title {
+        font-weight: 600;
     }
 
     .tooltip {
