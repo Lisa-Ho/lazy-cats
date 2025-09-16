@@ -3,6 +3,7 @@
     import CatStand from "./CatStand.svelte";
     import CatSit from "./CatSit.svelte";
     import CatSleep from "./CatSleep.svelte";
+    import BeeswarmLegend from "./BeeswarmLegend.svelte";
     export let cats;
     
     import * as d3 from "d3";
@@ -89,28 +90,8 @@
         hoveredData = null;
     }}
     style="border: 2px solid blue"
->
-    <div class="legend" style="display: flex; gap: 1rem; margin: 1rem 0;">
-        <div style="display: flex; align-items: center;">
-            <span class="legend-title"></span>
-        </div>
-        <div style="display: flex; align-items: center;">
-            <div
-                style="width: 16px; height: 16px; border-radius: 50%; background-color: {colr_dict[
-                    'Indoor'
-                ]}; margin-right: 8px;"
-            ></div>
-            <span>Indoor</span>
-        </div>
-        <div style="display: flex; align-items: center;">
-            <div
-                style="width: 16px; height: 16px; border-radius: 50%; background-color: {colr_dict[
-                    'Indoor Outdoor'
-                ]}; margin-right: 8px;"
-            ></div>
-            <span>Indoor and outdoor</span>
-        </div>
-    </div>
+    >
+    <BeeswarmLegend {colr_dict}/>
 
     <svg {width} {height} overflow="visible">
         <!---->
@@ -166,7 +147,7 @@
 <style>
     .chart-container {
         position: relative;
-        padding-top: 2rem;
+        padding-top: 1rem;
     }
 
     .legend {
