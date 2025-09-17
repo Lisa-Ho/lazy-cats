@@ -26,8 +26,8 @@
 
     // responsive height and scaling factors for mobile (<400)
     $: height = width < 400 ? width * 1.5 : width / 1.5;
-    $: radius = width < 400 ? width * 0.07 : width * 0.038;
-    $: visualRadius = width < 400 ? width * 0.0012 : width * 0.00072;
+    $: radius = width < 400 ? width * 0.07 : width * 0.04;
+    $: visualRadius = width < 400 ? width * 0.0012 : width * 0.0008;
 
     $: buffer = Math.max(12, width * 0.02) * 1.2; //calculated based on font size in px
 
