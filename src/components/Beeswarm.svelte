@@ -92,7 +92,6 @@
     on:mouseleave={() => {
         hoveredData = null;
     }}
-    style="border: 2px solid blue"
     >
     <BeeswarmLegend {colr_dict}/>
 

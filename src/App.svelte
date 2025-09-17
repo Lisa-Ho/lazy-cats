@@ -27,7 +27,7 @@
     
     <section>
         <h2>Explore lazy cats yourself</h2>
-        <p>Cats by lazy hours, housing setting, and weight</p>
+        <p>Check out their favourite poses, weight, age, gender and how they live.</p>
         <Beeswarm {cats}/>
     </section>
 
