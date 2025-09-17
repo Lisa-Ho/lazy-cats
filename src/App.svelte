@@ -1,5 +1,5 @@
 <script>
-    import Beeswarm from "./components/BeeswarmTest.svelte";
+    import Beeswarm from "./components/Beeswarm.svelte";
     import cats from "./assets/cats.json";
 </script>
 
@@ -69,7 +69,7 @@
 
     p {
         font-family: "Inter", sans-serif;
-        font-weight: 300;
+        font-weight: 400;
         font-size: 1rem;
         line-height: 1.65em;
         margin-bottom: 0.5rem;
