@@ -152,7 +152,7 @@
     }
 
     p {
-        font-family: "Inter", sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-weight: 400;
         font-size: 1rem;
         line-height: 1.65em;

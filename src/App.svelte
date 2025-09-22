@@ -1,32 +1,32 @@
 <script>
     import Beeswarm from "./components/Beeswarm.svelte";
+    import Hero from "./components/Hero.svelte";
     import cats from "./assets/cats.json";
 </script>
 
 
 <main>
     <section class="hero">
-    <h1>Lazy cats</h1>
-    <p>Test for how to display custom svgs and add tooltips to them.</p>
+        <Hero />
     </section>
     
     <section class="intro">
-    <h2>Lily</h2>
-    <p>This is Lily. Lily loves lying around around. She does so around 12 hours a day</p>
+    <h2>This is Lily</h2>
+    <p>Lily is a female cat in her prime age. She has long hair and normal weight. She lives indoors in a rural area with her owner and Ralph, another cat.</p>
     </section>
     
     <section>
-        <h2>Is Lily just a really lazy cat?</h2>
+        <h2>Is Lily just a lazy cat?</h2>
         <p>Actually, Lily is pretty average. Most cats love to ...</p>
     </section>
     
     <section>
-        <h2>Lying and sitting is most common</h2>
+        <h2>Are all cats lazy?</h2>
         <p>Most cats prefer to lie or sit, followed by standing</p>
     </section>
     
     <section>
-        <h2>Explore lazy cats yourself</h2>
+        <h2>Explore all cats</h2>
         <p>Check out their favourite poses, weight, age, gender and how they live.</p>
         <Beeswarm {cats}/>
     </section>
@@ -43,7 +43,7 @@
 
     main {
         max-width: 1000px;
-        margin: 4rem auto 0px auto;
+        margin: 2rem auto 0px auto;
         padding-left: 1rem;
         padding-right: 1rem;   
     }
@@ -53,22 +53,15 @@
         padding-bottom: 3rem;
     }
 
-    h1 {
-        font-family: "Inter", sans-serif;
-        font-weight: 700;
-        font-size: 2.4rem;
-        margin-bottom: 2rem;
-    }
-
     h2 {
-        font-family: "Inter", sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-weight: 600;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin-bottom: 1.4rem;
     }
 
     p {
-        font-family: "Inter", sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-weight: 400;
         font-size: 1rem;
         line-height: 1.65em;

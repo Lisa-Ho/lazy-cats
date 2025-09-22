@@ -91,7 +91,7 @@
 
     .legend {
         font-size: 0.9rem;
-        font-family: "Inter", sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-weight: 400;
     }
 
