@@ -1,6 +1,7 @@
 <script>
     import Beeswarm from "./components/Beeswarm.svelte";
     import Hero from "./components/Hero.svelte";
+    import Intro from "./components/Intro.svelte";
     import cats from "./assets/cats.json";
 </script>
 
@@ -10,9 +11,8 @@
         <Hero />
     </section>
     
-    <section class="intro">
-    <h2>This is Lily</h2>
-    <p>Lily is a female cat in her prime age. She has long hair and normal weight. She lives indoors in a rural area with her owner and Ralph, another cat.</p>
+    <section>
+        <Intro />
     </section>
     
     <section>
