@@ -1,6 +1,6 @@
 <script>
-    let width = 500;
-    $: svgWidth = Math.min(500, width * 0.9);    
+    let width = 0;
+    $: svgWidth = Math.min(450, width * 0.9);    
 </script>
 
 <div class="hero" bind:clientWidth={width}>
@@ -151,31 +151,5 @@
 </div>
 
 <style>
-    .hero {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 0.5rem;
-        align-items: center;
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-    }
 
-    h1 {
-        font-family: "Gloria Hallelujah", cursive;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 3rem;
-        margin-bottom: 0.5rem;
-        margin-top: 0.5rem;
-    }
-
-    .subtitle {
-        font-family: "Open Sans", sans-serif;
-        font-weight: 500;
-        font-size: 1rem;
-        line-height: 1.65em;
-        margin-bottom: 0.5rem;
-        color: rgb(22, 22, 22);
-    }
 </style>

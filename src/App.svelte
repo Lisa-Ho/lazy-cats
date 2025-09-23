@@ -7,7 +7,7 @@
 
 
 <main>
-    <section class="hero">
+    <section>
         <Hero />
     </section>
     
@@ -40,35 +40,6 @@
 
 
 <style>
-
-    main {
-        max-width: 1000px;
-        margin: 2rem auto 0px auto;
-        padding-left: 1rem;
-        padding-right: 1rem;   
-    }
-
-    section {
-        text-align: center;
-        padding-bottom: 3rem;
-    }
-
-    h2 {
-        font-family: "Open Sans", sans-serif;
-        font-weight: 600;
-        font-size: 1.3rem;
-        margin-bottom: 1.4rem;
-    }
-
-    p {
-        font-family: "Open Sans", sans-serif;
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 1.65em;
-        margin-bottom: 0.5rem;
-        color: rgb(22, 22, 22);
-    }
-   
 
 </style>
 

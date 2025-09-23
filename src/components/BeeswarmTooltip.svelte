@@ -95,26 +95,11 @@
             top 200ms ease,
             left 200ms ease;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    }
-
-    h3 {
-        font-family: "Inter", sans-serif;
-        font-weight: 600;
-        font-size: 1.05rem;
-        margin-bottom: 0.1rem;
-    }
-
-    p {
-        font-family: "Inter", sans-serif;
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 1.65em;
-        margin-bottom: 0.5rem;
-        color: rgb(22, 22, 22);
+        z-index: 1000;
     }
 
     .byline {
-        font-family: "Inter", sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-weight: 300;
         font-size: 0.75rem;
         line-height: 1rem;

@@ -1,5 +1,4 @@
 <script>
-    import CatPlay from "./CatPlay.svelte";
     import CatStand from "./CatStand.svelte";
     import CatSit from "./CatSit.svelte";
     import CatSleep from "./CatSleep.svelte";
@@ -75,17 +74,20 @@
 
     //get x/y coords for tooltip
     function handleHover(node, event) {
-        const container = document.querySelector(".chart-container");
+        const container = document.querySelector("#beeswarm");
         const containerRect = container.getBoundingClientRect();
 
         hoveredData = node;
         tooltipX = event.clientX - containerRect.left + 10; // offset for visibility
         tooltipY = event.clientY - containerRect.top + 10;
     }
+
+    $: console.log(tooltipX, tooltipY)
 </script>
 
 <div
     class="chart-container"
+    id="beeswarm"
     role="button"
     tabindex="0"
     bind:clientWidth={width}
@@ -143,20 +145,4 @@
         padding-top: 1rem;
     }
 
-
-    h3 {
-        font-family: "Inter", sans-serif;
-        font-weight: 600;
-        font-size: 1.05rem;
-        margin-bottom: 0.1rem;
-    }
-
-    p {
-        font-family: "Open Sans", sans-serif;
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 1.65em;
-        margin-bottom: 0.5rem;
-        color: rgb(22, 22, 22);
-    }
 </style>
