@@ -3,6 +3,7 @@
     import Hero from "./components/Hero.svelte";
     import Intro from "./components/Intro.svelte";
     import cats from "./assets/cats.json";
+
 </script>
 
 
@@ -12,7 +13,7 @@
     </section>
     
     <section>
-        <Intro />
+        <Intro {cats} />
     </section>
     
     <section>

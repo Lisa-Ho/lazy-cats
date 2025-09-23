@@ -81,8 +81,6 @@
         tooltipX = event.clientX - containerRect.left + 10; // offset for visibility
         tooltipY = event.clientY - containerRect.top + 10;
     }
-
-    $: console.log(tooltipX, tooltipY)
 </script>
 
 <div

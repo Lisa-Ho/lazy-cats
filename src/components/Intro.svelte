@@ -1,6 +1,8 @@
 <script>
-    let svgWidth = 500;
+    import BarChart from "./BarChart.svelte";
+    export let cats;
 </script>
+
 
 <div class="section-wrapper">
     <div class="content-container-column">
@@ -49,7 +51,9 @@
             </p>
         </div>
     </div>
-    <div class="chart-container">Chart goes here</div>
+
+    <BarChart {cats} />
+
 </div>
 
 <style>
@@ -101,12 +105,7 @@
         }
     }
 
-    .chart-container {
-        height: 200px;
-        width: 100%;
-        min-width: 300px;
-        border: 2px solid #333;
-    }
+    
     
     #lily-svg {
         order: 0;
