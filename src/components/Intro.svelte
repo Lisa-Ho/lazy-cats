@@ -3,10 +3,12 @@
 </script>
 
 <div class="section-wrapper">
-    <h2>This is Lily</h2>
+    <div class="content-container-column">
+        <h2>This is Lily</h2>
+    </div>
 
-    <div class="content-container">
-        <div class="svg-wrapper">
+    <div class="content-container-row">
+        <div class="svg-wrapper" id="lily-svg">
             <svg class="responsive-svg" viewBox="0 0 161 180">
                 <path
                     d="M107.05 9.8356C113.093 0.325792 115.752 0.872064 119.225 4.46673C120.937 6.23852 123.037 14.3093 124.526 16.2359C130.085 23.7435 135.824 31.1456 140.465 39.2919C144.837 46.7149 150.309 53.5804 153.25 61.788C158.62 76.8256 160.398 102.37 159.325 108.605C158.108 115.681 155.056 121.379 152.536 127.618C146.09 139.935 140.465 144.667 130.614 153.392C123.53 158.244 119.809 162.118 106.554 165.494C80.0971 165.494 79.1031 160.91 67.8329 153.392C45.4225 138.534 42.4287 116.272 39.5086 86.1024C39.5087 55.6369 47.9767 34.3407 54.6147 15.6247C55.7836 13.6411 57.0288 11.5655 58.1968 9.8356C63.3958 -3.07512 77.469 11.2697 82.7251 20.4389C91.1932 21.9178 90.6091 21.0305 97.9092 20.1432C101.413 19.5516 104.333 13.3402 107.05 9.8356Z"
@@ -26,42 +28,77 @@
                 />
             </svg>
         </div>
-        <div class="text-wrapper">
+        <div class="text-wrapper" id="lily-intro-text">
             <p>
                 Lily is a female cat in her prime age. She has long hair and
                 normal weight.
-            </p>
-            <p>
                 She lives indoors in a rural area with her owner and Ralph,
                 another cat.
             </p>
         </div>
     </div>
 
-    <div class="content-container">
+    <div class="content-container-column">
         <div class="text-wrapper">
             <p>
                 Lily likes to lie and sit around a lot. She spends most of her
                 day doing this, 12 hours to be precise. In winter, even 2 hours
                 more.
-            </p>
-            <p>
                 We know this because Lily took part in a study that tracked the
                 movements of 28 cats using artificial intelligence.
             </p>
         </div>
     </div>
-    <div class="content-container">
-            <div class="chart-container">Chart goes here</div>
-    </div>
+    <div class="chart-container">Chart goes here</div>
 </div>
 
 <style>
-    h2 {
-        font-family: "Open Sans", sans-serif;
-        font-weight: 600;
-        font-size: 1.3rem;
-        margin-bottom: 1.4rem;
+    @keyframes subtleWiggle {
+        0% {
+            transform: translateX(0) rotate(0deg);
+        }
+        20% {
+            transform: translateX(-0.5px) rotate(-0.3deg);
+        }
+        40% {
+            transform: translateX(0.5px) rotate(0.4deg);
+        }
+        60% {
+            transform: translateX(-0.4px) rotate(-0.2deg);
+        }
+        80% {
+            transform: translateX(0.3px) rotate(0.2deg);
+        }
+        100% {
+            transform: translateX(0) rotate(0deg);
+        }
+    }
+
+    @keyframes organicWiggle {
+        0% {
+            transform: translateX(0) rotate(0deg);
+        }
+        15% {
+            transform: translateX(-1.2px) rotate(-1deg);
+        }
+        30% {
+            transform: translateX(1px) rotate(1.2deg);
+        }
+        45% {
+            transform: translateX(-1.2px) rotate(-1deg);
+        }
+        60% {
+            transform: translateX(1px) rotate(0.5deg);
+        }
+        75% {
+            transform: translateX(-1px) rotate(-0.3deg);
+        }
+        90% {
+            transform: translateX(0.5px) rotate(0.2deg);
+        }
+        100% {
+            transform: translateX(0) rotate(0deg);
+        }
     }
 
     .chart-container {
@@ -69,43 +106,13 @@
         width: 100%;
         min-width: 300px;
         border: 2px solid #333;
-
     }
-
-    p {
-        font-family: "Open Sans", sans-serif;
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 1.65em;
-        margin-bottom: 1rem;
-        color: rgb(22, 22, 22);
+    
+    #lily-svg {
+        order: 0;
     }
-
-    .content-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.5rem;
-        max-width: 600px;
-        text-align: left;
-        align-items: center;
-    }
-
-    .svg-wrapper,
-    .text-wrapper {
-        flex: 1 1 0;
-        display: block;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .section-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        gap: 2rem;
+    #lily-intro-text {
+        order: 1;
     }
 
     .responsive-svg {
@@ -113,18 +120,35 @@
         width: 100%;
         height: auto;
         flex-shrink: 0;
+        margin-bottom: 1rem;
+        animation: subtleWiggle 4s ease-in-out infinite;
+    }
+
+    .responsive-svg:hover {
+        animation: organicWiggle 2.5s ease-in-out infinite;
     }
 
     @media (max-width: 450px) {
-        .content-container {
+        .content-container-row {
             flex-direction: column;
             align-items: center;
-            gap: 2rem;
+            gap: 1rem;
             text-align: center;
         }
 
         .responsive-svg {
             max-width: 200px;
+        }
+
+        .section-wrapper {
+            gap: 1rem;
+        }
+
+        #lily-svg {
+            order: 1;
+        }
+        #lily-intro-text {
+            order: 0;
         }
     }
 </style>
