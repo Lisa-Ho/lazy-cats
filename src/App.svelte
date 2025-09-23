@@ -22,7 +22,7 @@
     </section>
     
     <section>
-        <h2>Are all cats lazy?</h2>
+        <h2>Does this mean all cats are lazy?</h2>
         <p>Most cats prefer to lie or sit, followed by standing</p>
     </section>
     

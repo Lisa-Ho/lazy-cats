@@ -147,7 +147,7 @@
         />
     </svg>
     <h1>Lazy Cats</h1>
-    <p class="subtitle">How lazy are cats really?</p>
+    <p class="subtitle">Or how lazy are cats really?</p>
 </div>
 
 <style>
