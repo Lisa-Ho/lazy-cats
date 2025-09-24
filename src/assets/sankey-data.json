@@ -1,0 +1,70 @@
+{
+	"average": {
+	  "nodes": [
+		{ "id": "Sitting", "label": "Sitting" },
+		{ "id": "Lying", "label": "Lying" },
+		{ "id": "Lying2", "label": "Lying" },
+		{ "id": "Sitting2", "label": "Sitting" },
+		{ "id": "Standing2", "label": "Standing" },
+		{ "id": "Standing3", "label": "Standing" },
+		{ "id": "Sitting3", "label": "Sitting" }
+	  ],
+	  "links": [
+		{ "source": "Sitting", "target": "Lying2", "value": 14 },
+		{ "source": "Lying", "target": "Sitting2", "value": 13 },
+		{ "source": "Lying", "target": "Standing2", "value": 1 },
+		{ "source": "Lying2", "target": "Standing3", "value": 14 },
+		{ "source": "Sitting2", "target": "Standing3", "value": 13 },
+		{ "source": "Standing2", "target": "Sitting3", "value": 1 }
+	  ]
+	},
+	"summer": {
+	  "nodes": [
+		{ "id": "Sitting", "label": "Sitting" },
+		{ "id": "Lying", "label": "Lying" },
+		{ "id": "Lying2", "label": "Lying" },
+		{ "id": "Sitting2", "label": "Sitting" },
+		{ "id": "Standing2", "label": "Standing" },
+		{ "id": "Standing3", "label": "Standing" },
+		{ "id": "Sitting3", "label": "Sitting" },
+		{ "id": "Eating3", "label": "Eating" },
+		{ "id": "Grooming3", "label": "Grooming" }
+	  ],
+	  "links": [
+		{ "source": "Sitting", "target": "Lying2", "value": 13 },
+		{ "source": "Lying", "target": "Sitting2", "value": 14 },
+		{ "source": "Lying", "target": "Standing2", "value": 1 },
+		{ "source": "Lying2", "target": "Standing3", "value": 10 },
+		{ "source": "Lying2", "target": "Eating3", "value": 1 },
+		{ "source": "Lying2", "target": "Grooming3", "value": 2 },
+		{ "source": "Sitting2", "target": "Standing3", "value": 12 },
+		{ "source": "Sitting2", "target": "Eating3", "value": 1 },
+		{ "source": "Sitting2", "target": "Grooming3", "value": 1 },
+		{ "source": "Standing2", "target": "Sitting3", "value": 1 }
+	  ]
+	},
+	"winter": {
+	  "nodes": [
+		{ "id": "Sitting", "label": "Sitting" },
+		{ "id": "Lying", "label": "Lying" },
+		{ "id": "Lying2", "label": "Lying" },
+		{ "id": "Sitting2", "label": "Sitting" },
+		{ "id": "Standing2", "label": "Standing" },
+		{ "id": "Eating2", "label": "Eating" },
+		{ "id": "Standing3", "label": "Standing" },
+		{ "id": "Sitting3", "label": "Sitting" },
+		{ "id": "Eating3", "label": "Eating" }
+	  ],
+	  "links": [
+		{ "source": "Sitting", "target": "Lying2", "value": 14 },
+		{ "source": "Lying", "target": "Sitting2", "value": 8 },
+		{ "source": "Lying", "target": "Standing2", "value": 5 },
+		{ "source": "Lying", "target": "Eating2", "value": 1 },
+		{ "source": "Lying2", "target": "Standing3", "value": 14 },
+		{ "source": "Sitting2", "target": "Standing3", "value": 6 },
+		{ "source": "Eating2", "target": "Standing3", "value": 1 },
+		{ "source": "Standing2", "target": "Sitting3", "value": 5 },
+		{ "source": "Sitting2", "target": "Eating3", "value": 2 }
+	  ]
+	}
+  }

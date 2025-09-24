@@ -1,6 +1,7 @@
 <script>
     export let cats;
     import Scatter from "./Scatter.svelte";
+    import MovementSankey from "./MovementSankey.svelte";
 </script>
 
 <div class="section-wrapper">
@@ -9,6 +10,7 @@
         <div class="text-wrapper">
         <p>Actually, Lily is pretty average. Most cats love to ...</p>
     </div>
+    <MovementSankey />
     </div>
     <div class="content-container-column">
         <div class="text-wrapper">

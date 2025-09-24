@@ -5,9 +5,6 @@
 
 
 <div class="section-wrapper">
-    <div class="content-container-column">
-        <h2>This is Lily</h2>
-    </div>
 
     <div class="content-container-row">
         <div class="svg-wrapper" id="lily-svg">
@@ -31,6 +28,7 @@
             </svg>
         </div>
         <div class="text-wrapper" id="lily-intro-text">
+            <h2>This is Lily</h2>
             <p>
                 Lily is a female cat in her prime age. She has long hair and
                 normal weight.
@@ -108,10 +106,10 @@
     
     
     #lily-svg {
-        order: 0;
+        order: 1;
     }
     #lily-intro-text {
-        order: 1;
+        order: 0;
     }
 
     .responsive-svg {
