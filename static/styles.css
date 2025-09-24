@@ -64,10 +64,10 @@ main {
     margin: 2rem auto 0px auto;
     padding-left: 1rem;
     padding-right: 1rem;   
+    align-items: center;
 }
 
 section {
-    text-align: center;
     padding-bottom: 3rem;
 }
 
@@ -85,8 +85,7 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    max-width: 600px;
-    text-align: left;
+    max-width: 550px;
     align-items: center;
 }
 
@@ -96,9 +95,9 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    max-width: 600px;
-    text-align: center;
-    align-items: center;
+    width: 100%;
+    max-width: 550px;
+    align-items: left;
 }
 
 .svg-wrapper,
@@ -110,9 +109,9 @@ section {
 }
 
 .text-wrapper {
-    max-width: 500px;
+    max-width: 550px;
+    text-align: left;
 }
-
 
 .chart-title p {
     font-size: 1rem;
@@ -146,4 +145,9 @@ section {
     font-weight: 400;
     dominant-baseline: middle;
     fill: #222222;
+}
+
+.chart-container {
+    margin-top: 0.3rem;
+    margin-bottom: 2rem;
 }

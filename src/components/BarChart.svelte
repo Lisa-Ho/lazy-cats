@@ -6,6 +6,7 @@
 
     // filter for Lily and reformat data
     const poses = ["sitting", "lying", "standing", "other"];
+    
     $: cat =
         Array.isArray(cats) && cats.length
             ? poses.map((pose) => {
@@ -134,12 +135,11 @@
         height: 250px;
         width: 100%;
         min-width: 320px;
-        max-width: 500px;
-        align-items: center;
+        max-width: 550px;
+        align-items: left;
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        margin-bottom: 1rem;
     }
 
     .radio-group {

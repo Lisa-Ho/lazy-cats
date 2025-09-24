@@ -5,9 +5,9 @@
     import BeeswarmLegend from "./BeeswarmLegend.svelte";
     import BeeswarmTooltip from "./BeeswarmTooltip.svelte";
     export let cats;
-    
+
     import * as d3 from "d3";
-    import { forceSimulation, forceX, forceY, forceCollide } from "d3-force";
+    import { forceSimulation, forceY, forceCollide } from "d3-force";
 
     const component_map = {
         standing: CatStand,
@@ -44,7 +44,9 @@
         .range([margin.left + radius, innerWidth - radius - radius]);
 
     $: yTarget = (d) =>
-        d.lazy_diff > 0 ? centerLine - radius - buffer : centerLine + radius + buffer;
+        d.lazy_diff > 0
+            ? centerLine - radius - buffer
+            : centerLine + radius + buffer;
 
     let simulation;
 
@@ -83,55 +85,65 @@
     }
 </script>
 
-<div
-    class="chart-container"
-    id="beeswarm"
-    role="button"
-    tabindex="0"
-    bind:clientWidth={width}
-    on:mouseleave={() => {
-        hoveredData = null;
-    }}
+<div class="section-wrapper" id="beeswarm-section" bind:clientWidth={width}>
+    <div class="content-container-column">
+        <h2>Explore the cats in the study</h2>
+        <div class="text-wrapper">
+            <p>
+                Check out the 28 cats from the study, their favourite activity, weight, age, gender and how
+                they live.
+            </p>
+        </div>
+    </div>
+    <div
+        class="chart-container"
+        id="beeswarm"
+        role="button"
+        tabindex="0"
+        on:mouseleave={() => {
+            hoveredData = null;
+        }}
     >
-    <BeeswarmLegend {colr_dict}/>
+        <BeeswarmLegend {colr_dict} />
 
-    <svg {width} {height} overflow="visible">
-        <!--
+        <svg {width} {height} overflow="visible">
+            <!--
         <rect x={0} y={0} {width} {height} fill="none" stroke="red" />
 -->
-        <!-- Line -->
-        <line
-            x1={margin.left}
-            x2={width - margin.left}        
-            y1={centerLine + radius}
-            y2={centerLine + radius}
-            stroke="gray"
-            stroke-dasharray="4"
-        />
+            <!-- Line -->
+            <line
+                x1={margin.left}
+                x2={width - margin.left}
+                y1={centerLine + radius}
+                y2={centerLine + radius}
+                stroke="gray"
+                stroke-dasharray="4"
+            />
 
-        <!-- Markers -->
-        {#each nodes as node, i}
-            {#if component_map[node.pose1]}
-                <g
-                    transform={`translate(${node.x}, ${node.y}) scale(${visualRadius})`}
-                >
-                    <svelte:component
-                        this={component_map[node.pose1]}
-                        season={colr_dict[node.housing]}
-                        stripe1={node.stripe1}
-                        stripe2={node.stripe2}
-                        stripe3={node.stripe3}
-                        on:mouseover={(e) => handleHover(node, e)}
-                        on:focus={(e) => handleHover(node, e)}
-                        tabindex="0"
-                    />
-                </g>
-            {/if}
-        {/each}
-    </svg>
-    {#if hoveredData}
-        <BeeswarmTooltip {tooltipY} {tooltipX} {hoveredData}/>
-    {/if}
+            <!-- Markers -->
+            {#each nodes as node, i}
+                {#if component_map[node.pose1]}
+                    <g
+                        transform={`translate(${node.x}, ${node.y}) scale(${visualRadius})`}
+                    >
+                        <svelte:component
+                            this={component_map[node.pose1]}
+                            season={colr_dict[node.housing]}
+                            stripe1={node.stripe1}
+                            stripe2={node.stripe2}
+                            stripe3={node.stripe3}
+                            on:mouseover={(e) => handleHover(node, e)}
+                            on:focus={(e) => handleHover(node, e)}
+                            tabindex="0"
+                        />
+                    </g>
+                {/if}
+            {/each}
+        </svg>
+        {#if hoveredData}
+            <BeeswarmTooltip {tooltipY} {tooltipX} {hoveredData} />
+        {/if}
+    </div>
 </div>
 
 <!--
@@ -140,7 +152,13 @@
 <style>
     .chart-container {
         position: relative;
-        padding-top: 1rem;
     }
 
+    #beeswarm-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        gap: 2rem;
+    }
 </style>
