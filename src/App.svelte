@@ -2,6 +2,7 @@
     import Beeswarm from "./components/Beeswarm.svelte";
     import Hero from "./components/Hero.svelte";
     import Intro from "./components/Intro.svelte";
+    import Benchmark from "./components/Benchmark.svelte";
     import cats from "./assets/cats.json";
 
 </script>
@@ -17,8 +18,7 @@
     </section>
     
     <section>
-        <h2>Is Lily just a lazy cat?</h2>
-        <p>Actually, Lily is pretty average. Most cats love to ...</p>
+        <Benchmark {cats}/>
     </section>
     
     <section>
