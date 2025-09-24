@@ -113,3 +113,37 @@ section {
     max-width: 500px;
 }
 
+
+.chart-title p {
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    dominant-baseline: middle;
+    fill: #222222;
+    margin-bottom: 0.2rem;
+}
+
+.annotation {
+    font-size: 1.7rem;
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 500;
+    dominant-baseline: middle;
+    fill: #222222;
+    margin-bottom: 0.2rem;
+}
+
+.axis-label {
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    dominant-baseline: middle;
+    fill: #222222;
+}
+
+.value-label {
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    dominant-baseline: middle;
+    fill: #222222;
+}

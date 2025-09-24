@@ -130,6 +130,18 @@
 <!-- border: 1px solid #333; -->
 
 <style>
+    #bar-chart {
+        height: 250px;
+        width: 100%;
+        min-width: 320px;
+        max-width: 500px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
     .radio-group {
         display: flex;
         gap: 1rem;
@@ -196,51 +208,5 @@
         height: 8px;
         border-radius: 50%;
         background-color: #d63c7c;
-    }
-
-    #bar-chart {
-        height: 250px;
-        width: 100%;
-        min-width: 320px;
-        max-width: 500px;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .chart-title p {
-        font-size: 1rem;
-        font-family: "Open Sans", sans-serif;
-        font-weight: 600;
-        dominant-baseline: middle;
-        fill: #222222;
-        margin-bottom: 0.2rem;
-    }
-
-    .annotation {
-        font-size: 1.7rem;
-        font-family: "Gloria Hallelujah", cursive;
-        font-weight: 500;
-        dominant-baseline: middle;
-        fill: #222222;
-        margin-bottom: 0.2rem;
-    }
-
-    .axis-label {
-        font-size: 1rem;
-        font-family: "Open Sans", sans-serif;
-        font-weight: 400;
-        dominant-baseline: middle;
-        fill: #222222;
-    }
-
-    .value-label {
-        font-size: 1rem;
-        font-family: "Open Sans", sans-serif;
-        font-weight: 400;
-        dominant-baseline: middle;
-        fill: #222222;
     }
 </style>
