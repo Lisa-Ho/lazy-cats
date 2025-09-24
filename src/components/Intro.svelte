@@ -44,7 +44,7 @@
         <div class="text-wrapper">
             <p>
                 Lily likes to lie and sit around a lot. She spends most of her
-                day doing this, 12 hours to be precise. In winter, even 2 hours
+                day doing this — almost 18 hours to be precise — and in winter even
                 more.
                 We know this because Lily took part in a study that tracked the
                 movements of 28 cats using artificial intelligence.
