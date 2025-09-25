@@ -140,11 +140,11 @@
             <text
                 class="axis-title"
                 x={xScale(60)}
-                y={centerLine + buffer * 2.3}
-                text-anchor="left"
+                y={centerLine + buffer + buffer * 2.3}
+                text-anchor="start"
             >
-                <tspan x={xScale(60)} dy="1.2rem">Time lying</tspan>
-                <tspan x={xScale(60)} dy="1.2rem">or sitting</tspan>
+                <tspan x={xScale(59.3)} dy="0em">Time lying</tspan>
+                <tspan x={xScale(59.3)} dy="1.2em">or sitting</tspan>
             </text>
 
             <!-- y-axis -->
@@ -184,20 +184,20 @@
                 class="axis-title"
                 x={margin.left + buffer}
                 y={centerLine + radius - buffer - centerLine / 2}
-                text-anchor="left"
+                text-anchor="start"
             >
-                <tspan x={margin.left} dy="-2.2rem">Lazier in</tspan>
-                <tspan x={margin.left} dy="1.2rem">winter</tspan>
+                <tspan x={margin.left} dy="-2.2em">Lazier in</tspan>
+                <tspan x={margin.left} dy="1.2em">winter</tspan>
             </text>
 
             <text
                 class="axis-title"
                 x={margin.left + buffer}
-                y={centerLine + radius + buffer + centerLine / 2}
-                text-anchor="left"
+                y={centerLine + radius + buffer + buffer + centerLine / 2}
+                text-anchor="start"
             >
-                <tspan x={margin.left} dy="1.5rem">Lazier in</tspan>
-                <tspan x={margin.left} dy="1.2rem">summer</tspan>
+                <tspan x={margin.left} dy="0em">Lazier in</tspan>
+                <tspan x={margin.left} dy="1.2em">summer</tspan>
             </text>
             <!-- Markers -->
             {#each nodes as node, i}
