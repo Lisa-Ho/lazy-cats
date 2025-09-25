@@ -87,12 +87,14 @@
         display: flex;
         justify-content: center;
         gap: 2rem;
+        align-items: left;
     }
 
     .legend {
         font-size: 0.9rem;
         font-family: "Open Sans", sans-serif;
         font-weight: 400;
+        
     }
 
     #housing-legend {

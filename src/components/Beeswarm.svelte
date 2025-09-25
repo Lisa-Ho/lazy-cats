@@ -94,7 +94,9 @@
                 they live.
             </p>
         </div>
+        <BeeswarmLegend {colr_dict} />
     </div>
+    
     <div
         class="chart-container"
         id="beeswarm"
@@ -104,7 +106,7 @@
             hoveredData = null;
         }}
     >
-        <BeeswarmLegend {colr_dict} />
+        
 
         <svg {width} {height} overflow="visible">
             <!--
@@ -157,7 +159,7 @@
     #beeswarm-section {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: left;
         position: relative;
         gap: 2rem;
     }
