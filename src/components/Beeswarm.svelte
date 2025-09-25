@@ -79,9 +79,20 @@
         const container = document.querySelector("#beeswarm");
         const containerRect = container.getBoundingClientRect();
 
+        const minX = 80; // minimum offset from left edge
+        const maxX = containerRect.width - 60; // adjust based on tooltip width
+
         hoveredData = node;
-        tooltipX = event.clientX - containerRect.left + 10; // offset for visibility
+        const rawX = event.clientX - containerRect.left + 10; // offset for visibility
+        tooltipX = Math.max(minX, Math.min(rawX, maxX));
         tooltipY = event.clientY - containerRect.top + 10;
+    }
+
+    //x-axis
+    const axisTicks = [60, 65, 70, 75, 80, 85];
+
+    function formatHours(hoursProp) {
+        return `${Math.round(hoursProp)}%`;
     }
 </script>
 
@@ -90,13 +101,13 @@
         <h2>Explore the cats in the study</h2>
         <div class="text-wrapper">
             <p>
-                Check out the 28 cats from the study, their favourite activity, weight, age, gender and how
-                they live.
+                Check out the 28 cats from the study, their favourite activity,
+                weight, age, gender and how they live.
             </p>
         </div>
         <BeeswarmLegend {colr_dict} />
     </div>
-    
+
     <div
         class="chart-container"
         id="beeswarm"
@@ -106,13 +117,8 @@
             hoveredData = null;
         }}
     >
-        
-
         <svg {width} {height} overflow="visible">
-            <!--
-        <rect x={0} y={0} {width} {height} fill="none" stroke="red" />
--->
-            <!-- Line -->
+            <!-- x-Axis -->
             <line
                 x1={margin.left}
                 x2={width - margin.left}
@@ -121,7 +127,78 @@
                 stroke="gray"
                 stroke-dasharray="4"
             />
+            {#each axisTicks as tick}
+                <g>
+                    <text
+                        class="axis-ticklabel"
+                        x={xScale(tick)}
+                        y={centerLine + radius}
+                        >{formatHours(tick)}
+                    </text>
+                </g>
+            {/each}
+            <text
+                class="axis-title"
+                x={xScale(60)}
+                y={centerLine + buffer * 2.3}
+                text-anchor="left"
+            >
+                <tspan x={xScale(60)} dy="1.2rem">Time lying</tspan>
+                <tspan x={xScale(60)} dy="1.2rem">or sitting</tspan>
+            </text>
 
+            <!-- y-axis -->
+            <defs>
+                <marker
+                    id="arrowhead"
+                    markerWidth="6"
+                    markerHeight="6"
+                    refX="3"
+                    refY="3"
+                    orient="auto"
+                    markerUnits="strokeWidth"
+                >
+                    <path d="M0,0 L6,3 L0,6 Z" fill="#444" />
+                </marker>
+            </defs>
+
+            <line
+                x1={margin.left + buffer / 2}
+                x2={margin.left + buffer / 2}
+                y1={centerLine + radius - buffer}
+                y2={centerLine + radius - buffer - centerLine / 2}
+                stroke="#444"
+                stroke-dasharray="0"
+                marker-end="url(#arrowhead)"
+            />
+            <line
+                x1={margin.left + buffer / 2}
+                x2={margin.left + buffer / 2}
+                y1={centerLine + radius + buffer}
+                y2={centerLine + radius + buffer + centerLine / 2}
+                stroke="#444"
+                stroke-dasharray="0"
+                marker-end="url(#arrowhead)"
+            />
+            <text
+                class="axis-title"
+                x={margin.left + buffer}
+                y={centerLine + radius - buffer - centerLine / 2}
+                text-anchor="left"
+            >
+                <tspan x={margin.left} dy="-2.2rem">Lazier in</tspan>
+                <tspan x={margin.left} dy="1.2rem">winter</tspan>
+            </text>
+
+            <text
+                class="axis-title"
+                x={margin.left + buffer}
+                y={centerLine + radius + buffer + centerLine / 2}
+                text-anchor="left"
+            >
+                <tspan x={margin.left} dy="1.5rem">Lazier in</tspan>
+                <tspan x={margin.left} dy="1.2rem">summer</tspan>
+            </text>
             <!-- Markers -->
             {#each nodes as node, i}
                 {#if component_map[node.pose1]}
@@ -157,6 +234,26 @@
         flex-direction: column;
         align-items: left;
         position: relative;
-        gap: 2rem;
+        gap: 0rem;
+    }
+
+    .axis-title {
+        font-size: 0.9rem;
+        font-weight: 600;
+        fill: #444444;
+        font-family: "Open Sans", sans-serif;
+        max-width: 10px;
+    }
+
+    .axis-ticklabel {
+        font-size: 0.9rem;
+        font-weight: 400;
+        fill: #444444;
+        font-family: "Open Sans", sans-serif;
+        paint-order: stroke;
+        stroke: white;
+        stroke-width: 6px;
+
+        dominant-baseline: middle;
     }
 </style>
