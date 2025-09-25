@@ -1,11 +1,11 @@
 {
 	"average": {
 	  "nodes": [
-		{ "id": "Sitting", "label": "Sitting" },
-		{ "id": "Lying", "label": "Lying" },
+		{ "id": "Sitting", "label": "Sitting"},
+		{ "id": "Lying", "label": "Lying"},
 		{ "id": "Lying2", "label": "Lying" },
-		{ "id": "Sitting2", "label": "Sitting" },
-		{ "id": "Standing2", "label": "Standing" },
+		{ "id": "Sitting2", "label": "Sitting"},
+		{ "id": "Standing2", "label": "Standing"},
 		{ "id": "Standing3", "label": "Standing" },
 		{ "id": "Sitting3", "label": "Sitting" }
 	  ],
