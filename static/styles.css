@@ -85,7 +85,7 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    max-width: 550px;
+    max-width: 600px;
     align-items: center;
 }
 
@@ -96,7 +96,7 @@ section {
     justify-content: center;
     gap: 2rem;
     width: 100%;
-    max-width: 550px;
+    max-width: 600px;
     align-items: left;
 }
 
@@ -109,7 +109,7 @@ section {
 }
 
 .text-wrapper {
-    max-width: 550px;
+    width: 100%;
     text-align: left;
 }
 
@@ -150,12 +150,111 @@ section {
 .chart-container {
     margin-top: 0.3rem;
     margin-bottom: 2rem;
+    position: relative;
 }
 
-.sankey-label {
+#bar-chart {
+    height: 250px;
+    width: 100%;
+    max-width: 600px;
+    min-width: 320px;
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sankey-container {
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+    margin-top: 1.5rem;
+}
+
+#sankey-chart {
+    max-width: 600px;
+    min-width: 320px;
+    height: 400px;
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#scatter-chart {
+    width: 100%;
+    min-width: 320px;
+    max-width: 600px;
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+input[type="radio"] {
+    margin-right: 0.3rem;
+    opacity: 0;
+    cursor: pointer;
+}
+
+label {
+    cursor: pointer;
+    font-weight: 400;
     font-size: 1rem;
     font-family: "Open Sans", sans-serif;
-    font-weight: 400;
     dominant-baseline: middle;
-    fill: #222222; 
+    fill: #222222;
+    min-width: 94px;
+    text-align: left;
+}
+
+.radio-option {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    user-select: none;
+    display: inline-block;
+}
+
+.radio-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio-option::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #8e8e8e;
+    background-color: white;
+}
+
+.radio-option:has(input[type="radio"]:checked) {
+    font-weight: 600;
+}
+
+.radio-option:has(input[type="radio"]:checked)::before {
+    border-color: #d63c7c;
+}
+
+.radio-option:has(input[type="radio"]:checked)::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #d63c7c;
 }

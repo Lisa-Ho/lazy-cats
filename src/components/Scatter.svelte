@@ -169,15 +169,7 @@
 </div>
 
 <style>
-    #scatter-chart {
-        width: 100%;
-        min-width: 320px;
-        max-width: 550px;
-        align-items: left;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
+    
 
     :global(.tick text) {
         font-size: 0.9rem;

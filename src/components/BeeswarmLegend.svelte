@@ -87,7 +87,6 @@
         display: flex;
         justify-content: center;
         gap: 2rem;
-        align-items: left;
     }
 
     .legend {

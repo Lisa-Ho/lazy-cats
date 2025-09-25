@@ -2,7 +2,7 @@
     import * as d3 from "d3";
     export let cats = [];
 
-    let season = "average";
+    let barSeason = "average";
 
     // filter for Lily and reformat data
     const poses = ["sitting", "lying", "standing", "other"];
@@ -23,7 +23,7 @@
             : [];
 
     $: sortedData = cat
-        .map((d) => ({ pose: d.pose, value: d[season] }))
+        .map((d) => ({ pose: d.pose, value: d[barSeason] }))
         .sort((a, b) => {
             if (a.pose === "other") return 1;
             if (b.pose === "other") return -1;
@@ -67,8 +67,8 @@
     }
 
     $: sittingLyingSum = cat.length
-        ? (cat.find((d) => d.pose === "sitting")?.[season] ?? 0) +
-          (cat.find((d) => d.pose === "lying")?.[season] ?? 0)
+        ? (cat.find((d) => d.pose === "sitting")?.[barSeason] ?? 0) +
+          (cat.find((d) => d.pose === "lying")?.[barSeason] ?? 0)
         : 0;
 </script>
 
@@ -82,9 +82,9 @@
             <label class="radio-option">
                 <input
                     type="radio"
-                    name="season"
+                    name="bar-season"
                     value={s}
-                    bind:group={season}
+                    bind:group={barSeason}
                 />
                 {toSentenceCase(s)}
             </label>
@@ -131,82 +131,5 @@
 <!-- border: 1px solid #333; -->
 
 <style>
-    #bar-chart {
-        height: 250px;
-        width: 100%;
-        min-width: 320px;
-        max-width: 550px;
-        align-items: left;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .radio-group {
-        display: flex;
-        gap: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    input[type="radio"] {
-        margin-right: 0.3rem;
-        opacity: 0;
-        cursor: pointer;
-    }
-
-    label {
-        cursor: pointer;
-        font-weight: 400;
-        font-size: 1rem;
-        font-family: "Open Sans", sans-serif;
-        dominant-baseline: middle;
-        fill: #222222;
-        min-width: 94px;
-        text-align: left;
-    }
-
-    .radio-option {
-        position: relative;
-        padding-left: 28px;
-        cursor: pointer;
-        user-select: none;
-        display: inline-block;
-    }
-
-    .radio-option input[type="radio"] {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-    }
-
-    .radio-option::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 4px;
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        border: 2px solid #8e8e8e;
-        background-color: white;
-    }
-
-    .radio-option:has(input[type="radio"]:checked) {
-        font-weight: 600;
-    }
-
-    .radio-option:has(input[type="radio"]:checked)::before {
-        border-color: #d63c7c;
-    }
-
-    .radio-option:has(input[type="radio"]:checked)::after {
-        content: "";
-        position: absolute;
-        left: 5px;
-        top: 9px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: #d63c7c;
-    }
+   
 </style>

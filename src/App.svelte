@@ -4,6 +4,7 @@
     import Intro from "./components/Intro.svelte";
     import Benchmark from "./components/Benchmark.svelte";
     import Conclusion from "./components/Conclusion.svelte";
+    import Footer from "./components/Footer.svelte";
     import cats from "./assets/cats.json";
 </script>
 
@@ -28,8 +29,8 @@
         <Beeswarm {cats} />
     </section>
 
-    <section class="Footer" style="padding-top:4rem;">
-        <p>Made with sweat and love</p>
+    <section>
+        <Footer />
     </section>
 </main>
 

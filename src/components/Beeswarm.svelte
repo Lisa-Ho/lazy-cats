@@ -152,10 +152,6 @@
  -->
 
 <style>
-    .chart-container {
-        position: relative;
-    }
-
     #beeswarm-section {
         display: flex;
         flex-direction: column;

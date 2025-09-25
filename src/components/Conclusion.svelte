@@ -11,8 +11,6 @@
                 news? What looks like laziness is usually quite normal cat
                 behavior.
             </p>
-        </div>
-        <div class="text-wrapper">
             <p>
                 Paragraph on energy saving, ... differences in breeds and by
                 individual cat. 
@@ -24,8 +22,6 @@
                 consequat. Duis aute irure dolor in reprehenderit in voluptate
                 velit esse cillum dolore eu fugiat nulla pariatur. 
             </p>
-        </div>
-        <div class="text-wrapper">
             <p>
                 However, sometimes the laziness can stem from a lack of
                 stimulation. Cats are naturally curious and active animals, but
