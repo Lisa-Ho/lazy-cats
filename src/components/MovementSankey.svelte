@@ -52,7 +52,7 @@
         <LayerCake data={sankeyData}>
             <Svg>
                 <g class="axis-labels">
-                    <text x={0} y={-10} text-anchor="start">First</text>
+                    <text x={0} y={-10} text-anchor="start">Most popular</text>
                     <text x={width / 2} y={-10} text-anchor="middle"
                         >Second</text
                     >

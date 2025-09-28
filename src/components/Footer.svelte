@@ -19,7 +19,7 @@
                 Sensors 2024, 24, 2623. <a href="https://doi.org/10.3390/s24082623">https://doi.org/10.3390/s24082623</a>.
             </p>
             <p>
-                Weekly data from the study was downloaded on 1 Sep 2025 via
+                Weekly data from the study was downloaded on 1st Sep 2025 via
                 <a href="https://doi.org/10.6084/m9.figshare.24848292"
                     >Figshare</a
                 >. The mean was used to calculate averages across winter and
