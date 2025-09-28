@@ -3,9 +3,7 @@
     export let cats;
 </script>
 
-
 <div class="section-wrapper">
-
     <div class="content-container-row">
         <div class="svg-wrapper" id="lily-svg">
             <svg class="responsive-svg" viewBox="0 0 161 180">
@@ -31,9 +29,8 @@
             <h2>This is Lily</h2>
             <p>
                 Lily is a female cat in her prime age. She has long hair and
-                normal weight.
-                She lives indoors in a rural area with her owner and Ralph,
-                another cat.
+                normal weight. She lives indoors in a rural area with her owner
+                and Ralph, another cat.
             </p>
         </div>
     </div>
@@ -42,16 +39,17 @@
         <div class="text-wrapper">
             <p>
                 Lily likes to lie and sit around a lot. She spends most of her
-                day doing this — almost 18 hours to be precise — and in winter even
-                more.
-                We know this because Lily took part in a study that tracked the
-                movements of 28 cats using artificial intelligence.
+                day doing this — almost 18 hours to be precise — and in winter
+                even more. We know this because Lily took part in a <a
+                    href="https://www.researchgate.net/publication/379967638_How_Lazy_Are_Pet_Cats_Really_Using_Machine_Learning_and_Accelerometry_to_Get_a_Glimpse_into_the_Behaviour_of_Privately_Owned_Cats_in_Different_Households"
+                    >study by the Massey University</a
+                > in New Zealand that tracked 28 pet cats to better understand their
+                daily behaviour.
             </p>
         </div>
     </div>
 
     <BarChart {cats} />
-
 </div>
 
 <style>
@@ -103,8 +101,6 @@
         }
     }
 
-    
-    
     #lily-svg {
         order: 1;
     }

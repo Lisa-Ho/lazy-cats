@@ -10,8 +10,18 @@
         <div class="text-wrapper">
             <p>Actually, Lily is pretty average.</p>
             <p>
-                The study tracked the movements of Lily and 27 other cats. Most
-                cats love to ...
+                The study by Smit and others used accelerometers to collect
+                movement data from Lily and 27 other cats for 1 week in summer
+                and 1 week in winter 2023. They then applied a machine learning
+                model to determine whether cats were being active, eating,
+                grooming, littering, lying, sraching, stiting or standing.
+            </p>
+            <p>
+                According to the study, cats spend the majority of their time
+                (86%) displaying inactive behavious — lying, sitting or
+                standing. In fact, those are the top 3 activities across both
+                seasons for all cats. However, a few cats spend a notable amount
+                of time eating in winter or grooming in summer.
             </p>
         </div>
         <MovementSankey />
@@ -19,11 +29,12 @@
     <div class="content-container-column">
         <div class="text-wrapper">
             <p>
-                Most cats that took part in the study spend the majority of
-                their time either sitting or lying. They also tend to stand
-                around more than 10% of their day. On average, cats spend more
-                time grooming and eating than being active, scratching or
-                littering.
+                On average, the cats in the study spend 36.6% of their time
+                sitting and 36.7% lying. Cats like Lily living in multi-cat
+                households spend slightly less time lying and more time sitting.
+                Cats spend another 12.7% of their day standing, less time on
+                grooming (5.5%), eating (5.5%), being active (2.8%), and very
+                little time on scratching or littering.
             </p>
         </div>
     </div>

@@ -2,18 +2,6 @@
     let width;
 </script>
 
-<!-- 
-        [1.1]: 
-        [1]: https://bsky.app/profile/lisahornung.bsky.social
-        
-        [2.1]: https://github.com/Lisa-Ho/Lisa-Ho/blob/main/README-linkedin-logo.png
-        [2]: https://uk.linkedin.com/in/lisa-hornung-16136783
-        
-        [3.1]: https://github.com/Lisa-Ho/Lisa-Ho/blob/main/README-mastodon-logo.png
-        [3]: https://fosstodon.org/@LisaHornung
-        
-        -->
-
 <div class="section-wrapper" id="footer" bind:clientWidth={width}>
     <div class="content-container-column" id="method">
         <div class="divider">
@@ -23,8 +11,28 @@
             <h3>Method</h3>
         </div>
         <div class="text-wrapper">
-            <p>All code available on Github</p>
-            <p>All code available on Github</p>
+            <p>
+                Data source: Smit, M.; Corner-Thomas, R.A.; Draganova, I.;
+                Andrews, C.J.; Thomas, D.G. How Lazy Are Pet Cats Really? Using
+                Machine Learning and Accelerometry to Get a Glimpse into the
+                Behaviour of Privately Owned Cats in Different Households.
+                Sensors 2024, 24, 2623. <a href="https://doi.org/10.3390/s24082623">https://doi.org/10.3390/s24082623</a>.
+            </p>
+            <p>
+                Weekly data from the study was downloaded on 1 Sep 2025 via
+                <a href="https://doi.org/10.6084/m9.figshare.24848292"
+                    >Figshare</a
+                >. The mean was used to calculate averages across winter and
+                summer periods for each cat. The cat names were sourced from
+                <a
+                    href="https://www.bluecross.org.uk/advice/cat/wellbeing-and-care/top-cat-names"
+                    >Blue Cross charity</a
+                > and applied randomly to the cats in the study based on their gender.
+            </p>
+            <p>
+                All for this project, including for the analysis, is available
+                on <a href="https://github.com/Lisa-Ho/lazy-cats">Github</a>
+            </p>
         </div>
     </div>
 
@@ -52,7 +60,10 @@
             </div>
             <div>
                 <!-- svelte-ignore a11y_consider_explicit_label -->
-                <a href="https://uk.linkedin.com/in/lisa-maria-hornung/" target="_blank">
+                <a
+                    href="https://uk.linkedin.com/in/lisa-maria-hornung/"
+                    target="_blank"
+                >
                     <svg viewBox="0 0 100 100">
                         <path
                             d="M87.7981 5.00807H12.7061C11.7382 4.96274 10.7708 5.10869 9.85944 5.43767C8.94804 5.76665 8.1105 6.27212 7.39468 6.92512C6.67891 7.57818 6.09893 8.366 5.68804 9.24342C5.27714 10.1209 5.04331 11.0708 5 12.0387V87.2944C5.0567 89.3198 5.88682 91.2473 7.31986 92.6799C8.75291 94.113 10.6802 94.9432 12.7061 95H87.7981C89.7674 94.9123 91.6241 94.0562 92.9702 92.6158C94.3162 91.1753 95.0441 89.2653 94.9979 87.2944V12.0387C95.0142 11.0966 94.8376 10.1612 94.4793 9.28971C94.121 8.41831 93.5883 7.62925 92.9139 6.9709C92.2401 6.31261 91.4385 5.79899 90.5588 5.46146C89.6791 5.12394 88.7397 4.96966 87.7981 5.00807ZM33.1244 80.0389H20.0184V39.9363H33.1244V80.0389ZM26.8807 33.8617C25.9662 33.8936 25.0549 33.736 24.2042 33.3988C23.3534 33.0617 22.5816 32.5523 21.9372 31.9026C21.2928 31.2529 20.7896 30.477 20.4595 29.6236C20.1292 28.7702 19.9791 27.8578 20.0184 26.9436C19.978 26.0195 20.1311 25.0972 20.4681 24.2358C20.8051 23.3743 21.3184 22.5929 21.9751 21.9415C22.6319 21.2901 23.4175 20.7831 24.2817 20.4532C25.1459 20.1232 26.0695 19.9775 26.9932 20.0254C27.9078 19.9936 28.8191 20.1512 29.6698 20.4883C30.5205 20.8254 31.2924 21.3348 31.9368 21.9845C32.5812 22.6342 33.0844 23.4101 33.4145 24.2635C33.7448 25.1169 33.8949 26.0294 33.8556 26.9436C33.896 27.8677 33.7429 28.79 33.4059 29.6514C33.0689 30.5128 32.5556 31.2943 31.8989 31.9456C31.2421 32.5971 30.4565 33.104 29.5923 33.4339C28.7281 33.7639 27.8045 33.9096 26.8807 33.8617ZM80.0358 80.0389H66.8736V58.1034C66.8736 52.8726 65.0174 49.2729 60.3487 49.2729C58.8986 49.2853 57.4874 49.746 56.3095 50.5919C55.1311 51.4378 54.2435 52.6274 53.7676 53.9975C53.402 55.0245 53.249 56.1151 53.3176 57.2035V80.0389H40.3804V39.9363H53.3176V45.5608C54.4679 43.4477 56.1796 41.6939 58.2642 40.4926C60.3487 39.2917 62.7247 38.6904 65.1299 38.755C73.6234 38.755 80.0358 44.3796 80.0358 56.3598V80.0389Z"
@@ -63,7 +74,10 @@
             </div>
             <div>
                 <!-- svelte-ignore a11y_consider_explicit_label -->
-                <a href="https://bsky.app/profile/lisahornung.bsky.social" target="_blank">
+                <a
+                    href="https://bsky.app/profile/lisahornung.bsky.social"
+                    target="_blank"
+                >
                     <svg viewBox="0 0 100 100">
                         <path
                             d="M24.5087 15.8177C34.827 23.5402 45.9255 39.1984 50.0003 47.6014C54.0754 39.199 65.1732 23.5401 75.4918 15.8177C82.937 10.2454 95 5.93387 95 19.6533C95 22.3933 93.4242 42.6705 92.5 45.9624C89.2875 57.4074 77.5812 60.3265 67.1683 58.5597C85.3699 61.6481 90.0002 71.8778 80.0005 82.1075C61.0091 101.536 52.7043 77.2329 50.5753 71.0056C50.1852 69.864 50.0027 69.3299 50 69.7841C49.9973 69.3299 49.8148 69.864 49.4247 71.0056C47.2966 77.2329 38.992 101.536 19.9995 82.1075C9.99963 71.8778 14.6298 61.6475 32.8317 58.5597C22.4185 60.3265 10.712 57.4074 7.49997 45.9624C6.57574 42.6702 5 22.393 5 19.6533C5 5.93387 17.0633 10.2454 24.5082 15.8177H24.5087Z"
@@ -111,11 +125,11 @@
     }
 
     #outro .text-wrapper {
-        text-align: center;  
+        text-align: center;
     }
 
     #outro p {
-        font-size : 0.9rem;
+        font-size: 0.9rem;
         font-weight: 400;
     }
 
