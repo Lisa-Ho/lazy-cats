@@ -2,43 +2,14 @@
 
 Personal project learning Svelte + D3 using a fun data set tracking how 28 cats spend their time. 
 
-Deployed version [here](https://lazy-cats.netlify.app/). Work in progress ....
+Final output [here](https://lazy-cats.netlify.app/). 
 
---- 
+---
+
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/80f07b1b-29e5-4187-8cbf-28dd84b2e352" />
+
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/79e026c5-df2c-43d6-a16b-6d35952141ec" />
 
 
 
-## Svelte documentation
-
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
-
-### Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-### Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-### Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/ffebea4d-0cd2-41d5-bfe0-e0af97e25f1d" />
