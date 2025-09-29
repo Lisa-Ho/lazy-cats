@@ -14,7 +14,7 @@
                 movement data from Lily and 27 other cats for 1 week in summer
                 and 1 week in winter 2023. They then applied a machine learning
                 model to determine whether cats were being active, eating,
-                grooming, littering, lying, sraching, stiting or standing.
+                grooming, littering, lying, scratching, sitting or standing.
             </p>
             <p>
                 According to the study, cats spend the majority of their time
@@ -30,8 +30,8 @@
         <div class="text-wrapper">
             <p>
                 On average, the cats in the study spend 36.6% of their time
-                sitting and 36.7% lying. Cats like Lily living in multi-cat
-                households spend slightly less time lying and more time sitting.
+                sitting and 36.7% lying. Cats like Lily who live together with
+                other cats spend slightly less time lying and more time sitting.
                 Cats spend another 12.7% of their day standing, less time on
                 grooming (5.5%), eating (5.5%), being active (2.8%), and very
                 little time on scratching or littering.

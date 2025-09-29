@@ -14,7 +14,7 @@
             <p>
                 Wild ancestors of pet cats had to hunt their food which requires
                 patience and conserving energy for explosive runs and intense
-                moments during a hunt. Domestic cats still follow these acient
+                moments during a hunt. Domestic cats still follow these ancient
                 patterns where they go through short bursts of play or
                 exploration followed by quite a lot of napping. There are also
                 differences in breeds or individual personalities that mean some
