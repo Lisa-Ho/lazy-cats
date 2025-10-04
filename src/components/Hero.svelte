@@ -146,8 +146,10 @@
             fill="black"
         />
     </svg>
+    <div class="title-text-wrapper">
     <h1>Lazy Cats</h1>
-    <p class="subtitle">Or how lazy are cats really?</p>
+    <p class="subtitle">Do cats really loaf all day? A visual investigation into feline laziness</p>
+</div>
 </div>
 
 <style>

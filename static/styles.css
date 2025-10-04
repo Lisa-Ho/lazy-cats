@@ -14,7 +14,7 @@ h1 {
     font-weight: 400;
     font-style: normal;
     font-size: 4rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     margin-top: 0.5rem;
 }
 
@@ -25,6 +25,7 @@ h1 {
     line-height: 1.65em;
     margin-bottom: 0.5rem;
     color: rgb(22, 22, 22);
+    max-width: 400px;
 }
 
 h2 {
@@ -60,6 +61,10 @@ a {
     text-decoration: underline; 
   }
 
+
+.title-text-wrapper {
+    text-align: center;
+}
 .tooltip p {
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
