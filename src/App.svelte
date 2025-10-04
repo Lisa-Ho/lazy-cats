@@ -6,6 +6,25 @@
     import Conclusion from "./components/Conclusion.svelte";
     import Footer from "./components/Footer.svelte";
     import cats from "./assets/cats.json";
+
+    import { onMount } from "svelte";
+
+    function sendHeight() {
+        const height = document.body.scrollHeight;
+        window.parent.postMessage({ height }, "https://inside-numbers.com");
+    }
+
+    onMount(() => {
+        sendHeight();
+        window.addEventListener("resize", sendHeight);
+        const observer = new MutationObserver(sendHeight);
+        observer.observe(document.body, { childList: true, subtree: true });
+
+        return () => {
+            window.removeEventListener("resize", sendHeight);
+            observer.disconnect();
+        };
+    });
 </script>
 
 <main>
