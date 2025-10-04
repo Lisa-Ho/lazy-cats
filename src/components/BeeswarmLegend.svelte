@@ -109,6 +109,10 @@
         margin: 1rem 0;
     }
 
+    svg {
+        overflow: visible;
+    }
+
     @media (max-width: 380px) {
         .legend-container {
             flex-direction: column;
