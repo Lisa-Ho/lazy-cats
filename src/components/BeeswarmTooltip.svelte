@@ -74,7 +74,7 @@
         {/if}
     </div>
     <p style="margin-bottom: 0rem;">
-        Sits or lies {formatHours(hoveredData.prop_lazy)} hours a day. Their favourite pose is {hoveredData.pose1} ({formatHours(hoveredData.pose1_value)}). Lives in {formatArea(hoveredData.area)} area with 
+        Inactive {formatHours(hoveredData.prop_lazy)} hours a day, loves {hoveredData.pose1}. Lives in {formatArea(hoveredData.area)} area with 
         {formatDogData(hoveredData.dog)} dog.
     </p>
 </div>
@@ -85,7 +85,7 @@
         text-align: left;
         padding: 10px;
         min-width: 140px;
-        max-width: 200px;
+        max-width: 160px;
         word-wrap: break-word;
         background: white;
         border-radius: 4px;
