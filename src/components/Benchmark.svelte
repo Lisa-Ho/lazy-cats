@@ -30,11 +30,10 @@
         <div class="text-wrapper">
             <p>
                 On average, the cats in the study spend 37% of their time
-                sitting and another 37% lying. Cats like Lily who live together with
-                other cats spend slightly less time lying and more time sitting.
-                Cats spend another 13% of their day standing, less time on
-                grooming (6%), eating (6%), being active (3%), and very
-                little time on scratching or littering.
+                sitting and 37% lying. They use almost 1.5 hours a day to groom
+                and the same to eat, but less than 45 minutes to be active.
+                Those who live together with other cats, like Lily, spend
+                slightly less time lying and more time sitting.
             </p>
         </div>
     </div>
