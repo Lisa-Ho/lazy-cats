@@ -6,10 +6,9 @@
         <h2>So all cats are lazy?</h2>
         <div class="text-wrapper">
             <p>
-                Do you have a cat that spends 15 hours a day sleeping?
-                According to this study, you’re not alone. The
-                good news? What looks like laziness is usually quite normal cat
-                behavior.
+                Do you have a cat that spends 15 hours a day sleeping? It seems
+                that you wouldn't be alone. The good news? What looks like
+                laziness is usually quite normal cat behavior.
             </p>
             <p>
                 Wild ancestors of pet cats had to hunt their food which requires
