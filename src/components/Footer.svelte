@@ -30,7 +30,7 @@
                 > and applied randomly to the cats in the study based on their gender.
             </p>
             <p>
-                All for this project, including for the analysis, is available
+                All the code for this project, including for the analysis, is available
                 on <a href="https://github.com/Lisa-Ho/lazy-cats">Github</a>
             </p>
         </div>
